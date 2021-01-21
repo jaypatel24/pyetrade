@@ -57,7 +57,7 @@ class ETradeOAuth(object):
             signature_type="AUTH_HEADER",
         )
         # get request token
-        self.session.fetch_request_token(self.req_token_url)
+        self.fetch_response = self.session.fetch_request_token(self.req_token_url)
         # get authorization url
         # etrade format: url?key&token
         authorization_url = self.session.authorization_url(self.auth_token_url)
